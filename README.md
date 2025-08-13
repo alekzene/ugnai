@@ -2,12 +2,12 @@
 
 *Test. Learn. Refine. Launch with confidence.*
 
-The **Simulation-Based Feedback Dashboard** helps product teams visualize MSME behavior, forecast feature adoption, and uncover the *why* behind customer preferences—without risking real customer data.
+The **Simulation-Based Feedback Dashboard** helps product teams visualize MSME behavior, forecast feature adoption, and uncover the *why* behind customer preferences, without risking real customer data.
 
 ## ✨ Why It Matters
 
 Launching a new product for MSMEs is risky. Wrong assumptions lead to wasted resources and lost trust.
-This platform simulates how different MSME segments would respond to your product or offer—giving you actionable insights *before* you go to market.
+This platform simulates how different MSME segments would respond to your product or offer, giving you actionable insights *before* you go to market.
 
 ## 🚀 Key Features
 
@@ -30,7 +30,7 @@ This platform simulates how different MSME segments would respond to your produc
 
 ## 🔒 Data Privacy First
 
-All simulations run on **synthetic, anonymized, or historical data**—ensuring compliance with privacy regulations.
+All simulations run on **synthetic, anonymized, or historical data**, ensuring compliance with privacy regulations.
 
 ## 📜 License
 
