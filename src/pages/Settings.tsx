@@ -51,7 +51,6 @@ const Settings = () => {
         </CardContent>
       </Card>
 
-      {/* Notifications */}
       <Card className="bg-gradient-card border-0 shadow-md">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -85,21 +84,6 @@ const Settings = () => {
         </CardContent>
       </Card>
 
-      {/* Security */}
-      <Card className="bg-gradient-card border-0 shadow-md">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-primary" />
-            Security
-          </CardTitle>
-          <CardDescription>Manage your account security settings</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <Button variant="outline">Change Password</Button>
-          <Button variant="outline">Download Account Data</Button>
-          <Button variant="destructive">Delete Account</Button>
-        </CardContent>
-      </Card>
     </div>
   );
 };

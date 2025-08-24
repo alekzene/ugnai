@@ -6,6 +6,9 @@ import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { useRef } from "react";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 import { 
   Calculator, 
   TrendingUp, 
@@ -23,6 +26,39 @@ const LoanSimulator = () => {
   const [monthlyRevenue, setMonthlyRevenue] = useState("185000");
   const [monthlyExpenses, setMonthlyExpenses] = useState("125000");
   const [expectedIncrease, setExpectedIncrease] = useState("60000");
+
+  const resultsRef = useRef<HTMLDivElement>(null);
+
+  const exportPDF = async () => {
+    if (!resultsRef.current) return;
+
+    const canvas = await html2canvas(resultsRef.current, { scale: 2 });
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("p", "mm", "a4");
+
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+
+    const imgProps = pdf.getImageProperties(imgData);
+    const imgWidth = pageWidth;
+    const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
+
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+    heightLeft -= pageHeight;
+
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+    }
+
+    pdf.save("loan-simulation.pdf");
+  };
+
 
   // Calculate loan payment using PMT formula
   const calculateMonthlyPayment = () => {
@@ -173,7 +209,7 @@ const LoanSimulator = () => {
         </Card>
 
         {/* Results */}
-        <Card className="lg:col-span-2 bg-gradient-card border-0 shadow-md">
+        <Card ref={resultsRef} className="lg:col-span-2 bg-gradient-card border-0 shadow-md">
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
               <span>Simulation Results</span>
@@ -289,13 +325,10 @@ const LoanSimulator = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-3 pt-4">
-              <Button className="flex-1 bg-gradient-primary">
-                Save Scenario
-              </Button>
-              <Button variant="outline" className="flex-1">
+            <div className="flex gap-3 pt-4" data-html2canvas-ignore="true">
+              <Button variant="outline" className="flex-1 bg-gradient-primary" onClick={exportPDF}>
                 <Download className="h-4 w-4 mr-2" />
-                Export PDF
+                Save Scenario as PDF
               </Button>
             </div>
           </CardContent>
