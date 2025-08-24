@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="p-6 space-y-6">
       {/* Welcome Header */}
@@ -129,7 +131,7 @@ const Dashboard = () => {
                   <p className="font-medium text-foreground">You're ready for a bigger loan!</p>
                   <p className="text-sm text-muted-foreground">Try: ₱500,000 - ₱800,000</p>
                 </div>
-                <Button className="bg-gradient-primary">
+                <Button className="bg-gradient-primary" onClick={() => navigate('/simulator')}>
                   Simulate Loan
                   <ArrowUpRight className="h-4 w-4 ml-2" />
                 </Button>
@@ -161,7 +163,7 @@ const Dashboard = () => {
               </p>
             </div>
             
-            <Button variant="outline" className="w-full">
+            <Button variant="outline" className="w-full" onClick={() => navigate('./assistant')}>
               Chat with AI Assistant
             </Button>
           </CardContent>

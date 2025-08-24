@@ -58,7 +58,7 @@ const LoanSimulator = () => {
       <div className="space-y-2">
         <h1 className="text-3xl font-bold text-foreground flex items-center gap-2">
           <Calculator className="h-8 w-8 text-primary" />
-          Loan Calculator
+          Loan Simulator
         </h1>
         <p className="text-muted-foreground">
           Try different loan amounts and see if you can afford them.

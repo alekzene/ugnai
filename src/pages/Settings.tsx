@@ -32,15 +32,15 @@ const Settings = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
-              <Input id="name" defaultValue="Ernesto Bautista" />
+              <Input id="name" defaultValue="User Name" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="business">Business Name</Label>
-              <Input id="business" defaultValue="Ernie's Auto Repair and Parts Supply" />
+              <Input id="business" defaultValue="User Business" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" defaultValue="ernie@erniesauto.ph" />
+              <Input id="email" defaultValue="user@gmail.com" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="phone">Phone</Label>
