@@ -26,7 +26,7 @@ const AIAssistant = () => {
     {
       id: '1',
       type: 'assistant',
-      content: "Hello Ernie! I'm your AI financial assistant. I can help explain loan terms, analyze your business finances, and provide personalized recommendations. What would you like to know?",
+      content: "Hello User! I'm your AI financial assistant. I can help explain loan terms, analyze your business finances, and provide personalized recommendations. What would you like to know?",
       timestamp: new Date()
     }
   ]);
@@ -75,6 +75,10 @@ const AIAssistant = () => {
     
     if (lowerQ.includes('apr')) {
       return "APR (Annual Percentage Rate) is the true yearly cost of your loan, including interest and fees.\n\n**Simple explanation:**\n• Interest rate = just the borrowing cost\n• APR = interest + all fees (origination, processing, etc.)\n• APR is always higher than the interest rate\n\n**Example:**\n• Loan: ₱500,000\n• Interest rate: 12%\n• Fees: ₱25,000\n• APR: ~13.2%\n\n**Why it matters:** APR lets you compare different lenders fairly, even if they have different fee structures.";
+    }
+
+    if (lowerQ.includes('grace')) {
+      return "Sa larangan ng negosyo, ang grace period ay tumutukoy sa \nnakatakdang panahon matapos ang isang due date \nkung saan pinapayagan pa rin ang isang kliyente \no kostumer na magbayad o magkumpleto ng \nobligasyon nang walang karagdagang bayarin o \nmulta. Halimbawa, kapag ang isang kompanya \nng bangko o credit card ay nagtakda ng \npetsa ng bayaran sa ika-15 ng buwan, \nmaaaring magbigay sila ng grace period na sampung araw. \nIbig sabihin, kahit lumampas na ang petsa \nng ika-15, maaari pa ring magbayad ang \nkostumer hanggang ika-25 nang hindi siya \npinapatawan ng interes o late fee. \nMahalaga ito sa negosyo sapagkat \nnagbibigay ito ng tiwala at konsiderasyon \nsa mga kliyente, at nakakatulong din upang mapanatili \nang magandang relasyon sa kanila. Sa \nkabilang banda, nagsisilbi rin itong paraan \npara ipakita ng mga kompanya na \nnaiintindihan nila ang sitwasyon ng \nkanilang mga customer, dahil hindi \nlahat ay agad nakakapaghanda ng bayad sa \nmismong takdang araw. ";
     }
     
     return "That's a great question! Based on your business profile as Ernie's Auto Repair, I'd recommend focusing on cash flow management and timing your expansion carefully. Your current financial health is strong with consistent revenue growth. Would you like me to dive deeper into any specific aspect of your finances?";

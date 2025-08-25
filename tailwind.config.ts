@@ -74,6 +74,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				bpi: {
+					red: 'hsl(var(--bpi-red))',
+					'red-foreground': 'hsl(var(--bpi-red-foreground))',
+					'red-light': 'hsl(var(--bpi-red-light))',
+					green: 'hsl(var(--bpi-green))',
+					'green-foreground': 'hsl(var(--bpi-green-foreground))',
+					'green-light': 'hsl(var(--bpi-green-light))'
 				}
 			},
 			backgroundImage: {

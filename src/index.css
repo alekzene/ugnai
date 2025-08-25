@@ -24,6 +24,14 @@
     --primary-hover: 218 89% 45%;
     --primary-light: 218 89% 96%;
 
+    /* BPI Brand Colors */
+    --bpi-red: 0 75% 27%;
+    --bpi-red-foreground: 0 0% 100%;
+    --bpi-red-light: 0 75% 95%;
+    --bpi-green: 120 61% 34%;
+    --bpi-green-foreground: 0 0% 100%;
+    --bpi-green-light: 120 61% 95%;
+
     /* Secondary - Neutral */
     --secondary: 218 12% 95%;
     --secondary-foreground: 218 24% 25%;

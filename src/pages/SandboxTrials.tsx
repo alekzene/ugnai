@@ -67,7 +67,7 @@ const SandboxTrials = () => {
       title: 'Traditional Term Loan',
       completedDate: '2024-11-10',
       rating: 3,
-      feedback: 'Fixed payments don\'t match our cash flow',
+      feedback: 'Repayment feels too short, I need longer terms',
       result: 'Not suitable'
     }
   ];
@@ -122,7 +122,7 @@ const SandboxTrials = () => {
                 <Button variant="secondary" size="sm">
                   Pause Trial
                 </Button>
-                <Button variant="outline" size="sm" className="text-primary-foreground border-primary-foreground/20">
+                <Button variant="secondary" size="sm" >
                   View Details
                 </Button>
               </div>
@@ -251,45 +251,6 @@ const SandboxTrials = () => {
           </div>
         </CardContent>
       </Card>
-
-      {/* Trial Benefits */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="bg-gradient-card border-0 shadow-md">
-          <CardHeader className="text-center">
-            <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
-            <CardTitle className="text-lg">Risk-Free Testing</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-sm text-muted-foreground">
-              Experience loan products without any commitment or impact on your credit score.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="bg-gradient-card border-0 shadow-md">
-          <CardHeader className="text-center">
-            <BarChart3 className="h-8 w-8 text-success mx-auto mb-2" />
-            <CardTitle className="text-lg">Real Scenarios</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-sm text-muted-foreground">
-              Simulations use your actual business data for accurate results and projections.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="bg-gradient-card border-0 shadow-md">
-          <CardHeader className="text-center">
-            <MessageSquare className="h-8 w-8 text-warning mx-auto mb-2" />
-            <CardTitle className="text-lg">Shape Products</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-sm text-muted-foreground">
-              Your feedback helps banks design better products for MSMEs like yours.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
     </div>
   );
 };
